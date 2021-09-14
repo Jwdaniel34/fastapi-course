@@ -3,6 +3,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 env_path = Path('.') / '.env'
+#if not installed globally - install globally first then in venv
 load_dotenv(dotenv_path=env_path)
 
 

@@ -8,5 +8,6 @@ class Base:
     __name__ : str
 
     #automatically generate names
+    @declared_attr
     def __tablename__(cls)->str:
         return cls.__name__.lower()
