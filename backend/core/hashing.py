@@ -3,6 +3,7 @@ from passlib.context import CryptContext
 pwt_context = CryptContext(schemes=["bcrypt"], deprecated= "auto")
 
 class Hasher():
+    
     @staticmethod
     def verify_password(plain_password, hashed_password):
         # to verify if hash is the same as plain_password

@@ -1,15 +1,31 @@
 fastapi
 uvicorn
 
-#for databases
+# for databases
 sqlalchemy
 psycopg2
 
-#for environment variables
+# for environment variables
 python-dotenv
 
-#for email validation
+# for email validation
 pydantic[email]
 
-#hashing
+# for hashing
 passlib[bcrypt]
+
+
+# for testing 
+pytest
+requests
+pytest-cov==3.0.0
+
+# for jwt token
+python-jose
+
+# for form data
+python-multipart
+
+# for tempate
+jinja2
+# reinstall libraries use : pip install -r .\requirements.txt

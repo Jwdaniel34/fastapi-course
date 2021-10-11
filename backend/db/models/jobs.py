@@ -4,6 +4,8 @@ from sqlalchemy.sql.expression import null
 
 from db.base_class import Base
 
+# use sql alchemy orm to translate into different databases less context switch
+# recommended to use orm
 
 class Job(Base):
     id = Column(Integer, primary_key=True, index=True)
@@ -14,7 +16,6 @@ class Job(Base):
     description = Column(String)
     date_post = Column(Date)
     is_active = Column(Boolean(), default = True)
-    owner_id = Column(Integer, ForeignKey('user.id'))
-    owner = relationship("User", back_populates="jobs")
-
+    owner_id = Column(Integer, ForeignKey('user.id')) # connect ForeignKey to user id
+    owner = relationship("User", back_populates="jobs") # back populates to User and jobs class
 
